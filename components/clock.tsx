@@ -9,8 +9,6 @@ const Clock = () => {
     const [s, setS] = useState(new Date().getSeconds())
     const [amAndPm, setAmAndPm] = useState<"PM" | "AM">(h > 12 ? "PM" : "AM")
 
-    useEffect(() => console.log(h, m, s),[])
-
     setInterval(() => setDisplayH( new Date().getHours() > 12 ? new Date().getHours() - 12 : new Date().getHours()), 1000)
     setInterval(() => setDisplayM((new Date().getMinutes() < 10) ? '0' + new Date().getMinutes().toString() : new Date().getMinutes().toString()), 1000)
     setInterval(() => setH(new Date().getHours()))

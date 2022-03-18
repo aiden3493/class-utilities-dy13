@@ -5,7 +5,6 @@ const Meal = () => {
     const Month = new Date().getMonth() < 10 ? '0' + (parseInt(new Date().getMonth().toString()) + 1).toString() : (parseInt(new Date().getMonth().toString()) + 1).toString()
     const [day, setDay] = useState(parseInt(new Date().getDate() < 10 ? '0' + new Date().getDate().toString() : new Date().getDate().toString()))
 
-
     const [meal, setMeal] = useState<string[]>([])
 
     async function fetchAPI(year:any, month:any, day:any) {
@@ -26,11 +25,11 @@ const Meal = () => {
     const onNextClick = async (e: any) => {
         e.preventDefault()
         if(day < 31) {
-            setDay((prev) => prev + 1)
             await fetchAPI(fullYear, Month, day + 1).then((value) => setMeal(formatMeal(value)))
+            await setDay((prev) => prev + 1)
         } else {
-            setDay(1)
-            await fetchAPI(fullYear, Month, day - 30).then((value) => setMeal(formatMeal(value)))
+            await fetchAPI(fullYear, Month, 1).then((value) => setMeal(formatMeal(value)))
+            await setDay(1)
         }
     }
 
@@ -38,11 +37,11 @@ const Meal = () => {
         e.preventDefault()
         if(day <= 31) {
             if (day - 1 === 0) {
-                setDay(31)
-                await fetchAPI(fullYear, Month, day + 1).then((value) => setMeal(formatMeal(value)))
+                await fetchAPI(fullYear, Month, 31).then((value) => setMeal(formatMeal(value)))
+                await setDay(31)
             } else {
-                setDay((prev) => prev - 1)
-                await fetchAPI(fullYear, Month, day + 1).then((value) => setMeal(formatMeal(value)))
+                await fetchAPI(fullYear, Month, day - 1).then((value) => setMeal(formatMeal(value)))
+                await setDay((prev) => prev - 1)
             }
         }
     }
@@ -76,8 +75,8 @@ const Meal = () => {
                 className="mt-3 w-full h-[240px] border-solid border-green-300 border-2 rounded-3xl select-text p-5 flex flex-col items-center font-bold">
                 <h2 className="text-center text-xl">{`${fullYear}.${Month}.${day}`}</h2>
                 <div className="flex flex-col justify-center w-full h-full space-y-1">
-                        {meal.map((element, index) => <p key={index}
-                            className="text-center text-sm ">{element}</p>)}
+                    {meal.map((element, index) => <p key={index}
+                                                     className="text-center text-sm ">{element}</p>)}
                 </div>
             </div>
         </div>

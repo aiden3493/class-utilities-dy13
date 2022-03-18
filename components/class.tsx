@@ -3,17 +3,21 @@ import {useEffect, useState} from "react";
 const Class = () => {
     const [dayOfTheWeek, setDayOfTheWeek] = useState(new Date().getDay() - 1)
 
+    if (dayOfTheWeek === 5) {
+        setDayOfTheWeek(4)
+    }
+
     const dayName = ["월요일", "화요일", "수요일", "목요일", "금요일",]
 
     const Mon = [
-            "과학",
-            "과학",
-            "수학",
-            "진로",
-            "국어",
-            "주선",
-            "주선",
-        ]
+        "과학",
+        "과학",
+        "수학",
+        "진로",
+        "국어",
+        "주선",
+        "주선",
+    ]
 
     const Tue = [
         "도덕",
@@ -51,7 +55,7 @@ const Class = () => {
         "예술",
     ]
 
-    const days = [Mon, Tue, Wen, Thu, Fri]
+    const days = [Mon, Tue, Wen, Thu, Fri, [], []]
 
     const onNextClick = async (e: any) => {
         e.preventDefault()
@@ -84,12 +88,12 @@ const Class = () => {
 
             <div className="w-full flex justify-center items-center">
                 <div onClick={onBeforeClick}
-                    className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 mr-[305px] mt-[290px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold">
+                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 mr-[305px] mt-[290px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold">
                     {"◁"}
                 </div>
 
                 <div onClick={onNextClick}
-                    className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 ml-[305px] mt-[290px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold">
+                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 ml-[305px] mt-[290px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold">
                     {"▷"}
                 </div>
             </div>
