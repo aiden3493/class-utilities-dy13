@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const Clock = () => {
     const [displayH, setDisplayH] = useState(new Date().getHours() > 12 ? new Date().getHours() - 12 : new Date().getHours())

@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import { useState} from "react";
 
 const Class = () => {
     const [dayOfTheWeek, setDayOfTheWeek] = useState(new Date().getDay() - 1)

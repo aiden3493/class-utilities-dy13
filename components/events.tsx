@@ -1,6 +1,4 @@
-import {useEffect, useState} from "react";
 import DDay from "./eventD-day";
-import {any} from "prop-types";
 
 const Event = () => {
     const mainEvent = {event: "선거", year: 2022, month: 3, date: 22}
