@@ -48,7 +48,7 @@ const Meal = () => {
 
     useEffect(() => {
         fetchAPI(fullYear, Month, day).then((value) => setMeal(formatMeal(value)))
-    }, [])
+    }, [day, Month, fullYear])
 
     return (
         <div className=" w-96 h-96 rounded-[35px] border-2 border-solid p-[37px] shadow-xl">

@@ -8,7 +8,7 @@ const HomeWork = () => {
         <div className=" w-96 h-96 rounded-[35px] border-2 border-solid p-[37px] shadow-xl">
             <div className="text-center text-[40px] font-bold font-sans">
                 <span className="text-2xl text-center font-medium">
-                    Today's {" "}
+                    Today&apos;s {" "}
                 </span>
                 Homework
             </div>
