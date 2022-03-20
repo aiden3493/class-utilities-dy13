@@ -1,11 +1,7 @@
 import { useState} from "react";
 
 const Class = () => {
-    const [dayOfTheWeek, setDayOfTheWeek] = useState(new Date().getDay() - 1)
-
-    if (dayOfTheWeek === 5) {
-        setDayOfTheWeek(4)
-    }
+    const [dayOfTheWeek, setDayOfTheWeek] = useState(new Date().getDay() - 1 === -1 ? 0 : new Date().getDay() - 1 === 5 ? 4 : new Date().getDay() - 1)
 
     const dayName = ["월요일", "화요일", "수요일", "목요일", "금요일",]
 
@@ -103,7 +99,7 @@ const Class = () => {
                 <h2 className="text-center text-xl">{`${dayName[dayOfTheWeek]}`}</h2>
                 <div className="flex flex-col justify-center w-full h-full">
                     <div className="flex flex-col items-center -space-y-[4px]">
-                        {days[dayOfTheWeek].map((element, index) => <h1 className="font-medium" key={index}>{`${index + 1}. ${element}`}</h1>)}
+                        {days[dayOfTheWeek].map((element, index) => <h1 className="font-bold" key={index}>{`${index + 1}. ${element}`}</h1>)}
                     </div>
                 </div>
             </div>

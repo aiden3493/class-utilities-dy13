@@ -16,7 +16,7 @@ const Clock = () => {
     setInterval(() => setS(new Date().getSeconds()))
 
     return (
-        <div className=" w-96 h-96 rounded-[35px] border-2 border-solid p-5 shadow-xl">
+        <div className="w-96 h-96 rounded-[35px] border-2 border-solid p-5 shadow-xl ">
             <div
                 className="flex items-center flex-col w-full h-full rounded-[25px] border-solid border-2 border-green-300 pt-7 pl-7 pr-7 mb-2">
                 <h1 className="text-2xl text-center">Time is</h1>
@@ -28,18 +28,18 @@ const Clock = () => {
                     className="flex justify-center items-center bg-white w-[180px] h-[180px] mt-5 rounded-full shadow-md bg-[url('../public/analog_clock.png')] bg-cover p-16 before:w-[6px] before:h-[6px] before:bg-black before:rounded-full before:border-solid before:border-[1px] before:border-white before:z-50 before:absolute">
                     <div className="absolute w-[70px] h-[70px] ">
                         <div
-                            className="w-[69px] h-[69px] flex justify-center absolute rounded-full before:w-[3px] before:h-[32px] before:bg-black before:rounded before:origin-bottom transition-all"
+                            className="w-[69px] h-[69px] flex justify-center rounded-full before:w-[3px] before:h-[32px] before:bg-black before:rounded before:origin-bottom transition-all"
                             style={{transform: `rotateZ(${h * 15}deg)`}}></div>
                     </div>
                     <div className="absolute w-[80px] h-[80px]">
                         <div
-                            className="w-[80px] h-[80px] flex justify-center absolute rounded-full before:w-[2px] before:h-[41px] before:bg-black before:rounded before:origin-bottom"
+                            className="w-[80px] h-[80px] flex justify-center rounded-full before:w-[2px] before:h-[41px] before:bg-black before:rounded before:origin-bottom"
                             style={{transform: `rotateZ(${m * 6}deg)`}}>
                         </div>
                     </div>
                     <div className="absolute w-[90px] h-[90px]">
                         <div
-                            className="w-[90px] h-[90px] flex justify-center absolute rounded-full before:w-[1px] before:h-[48px] before:bg-black before:bg-green-300 before:rounded before:origin-bottom"
+                            className="w-[90px] h-[90px] flex justify-center rounded-full before:w-[1px] before:h-[48px] before:bg-black before:bg-green-300 before:rounded before:origin-bottom"
                             style={{transform: `rotateZ(${s * 6}deg)`}}>
                         </div>
                     </div>

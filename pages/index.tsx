@@ -18,16 +18,28 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <main className="overflow-hidden scrollbar-hide select-none">
-                <div className="w-screen h-screen px-10 flex flex-row justify-center items-center content-center bg-[#F2F3F7]">
+            <main className="w-screen h-screen select-none bg-[#F2F3F7] overflow-y-hidden flex justify-center items-center absolute z-50 absolute">
+                <div className="w-screen h-screen flex flex-row justify-center items-center content-center bg-[#F2F3F7]">
                     <div
-                        className="w-auto max-w-[1500px] h-full max-h-[900px] z-10 rounded-[50px] p-10 min-h-[500px] min-w-[1000px] grid grid-cols-3 lg:gap-x-10 lg:gap-y-8">
-                        <Clock />
-                        <Meal />
-                        <Class />
-                        <HomeWork />
-                        <Event />
-                        <Materials />
+                        className="w-full h-full overflow-x-hidden overflow-y-scroll lg:overflow-y-hidden lg:overflow-x-hidden max-w-[1300px] lg:max-h-[900px] z-10 rounded-[50px] lg:min-h-[500px] lg:min-w-[1000px] py-10 px-5 flex flex-col items-center lg:grid lg:grid-cols-3 lg:grid-rows-2 space-y-5 lg:space-y-0 lg:gap-5">
+                        <div className="flex justify-center items-center content-center">
+                            <Clock />
+                        </div>
+                        <div className="flex justify-center items-center content-center">
+                            <Meal />
+                        </div>
+                        <div className="flex justify-center items-center content-center">
+                            <Class />
+                        </div>
+                        <div className="flex justify-center items-center content-center">
+                            <HomeWork />
+                        </div>
+                        <div className="flex justify-center items-center content-center">
+                            <Event />
+                        </div>
+                        <div className="flex justify-center items-center content-center">
+                            <Materials />
+                        </div>
                     </div>
                 </div>
             </main>

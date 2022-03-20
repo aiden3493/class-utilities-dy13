@@ -2,7 +2,7 @@ import Todo from "./homeworkTodo";
 
 const Materials = () => {
 
-    const materials = ["test", "test2", "test3"]
+    const materials = ["test1", "test2", "test3"]
 
     return (
         <div className=" w-96 h-96 rounded-[35px] border-2 border-solid p-[37px] shadow-xl">
