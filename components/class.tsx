@@ -82,7 +82,7 @@ const Class = () => {
                 Schedule
             </div>
 
-            <div className="w-full flex justify-center items-center">
+            <div className="relative w-full flex justify-center items-center">
                 <div onClick={onBeforeClick}
                      className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 mr-[305px] mt-[290px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold">
                     {"◁"}

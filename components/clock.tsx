@@ -25,11 +25,11 @@ const Clock = () => {
                     <h2 className="text-center text-[20px] font-bold mt-6">{`${amAndPm}`}</h2>
                 </div>
                 <div
-                    className="flex justify-center items-center bg-white w-[180px] h-[180px] mt-5 rounded-full shadow-md bg-[url('../public/analog_clock.png')] bg-cover p-16 before:w-[6px] before:h-[6px] before:bg-black before:rounded-full before:border-solid before:border-[1px] before:border-white before:z-50 before:absolute">
+                    className="relative flex justify-center items-center bg-white w-[180px] h-[180px] mt-5 rounded-full shadow-md bg-[url('../public/analog_clock.png')] bg-cover p-16 before:w-[6px] before:h-[6px] before:bg-black before:rounded-full before:border-solid before:border-[1px] before:border-white before:z-50 before:absolute">
                     <div className="absolute w-[70px] h-[70px] ">
                         <div
-                            className="w-[69px] h-[69px] flex justify-center rounded-full before:w-[3px] before:h-[32px] before:bg-black before:rounded before:origin-bottom transition-all"
-                            style={{transform: `rotateZ(${h * 15}deg)`}}></div>
+                            className="w-[69px] h-[69px] flex justify-center rounded-full before:w-[3px] before:h-[32px] before:bg-black before:rounded before:origin-bottom transition-all ml-[0.3px]"
+                            style={{transform: `rotateZ(${h * 30}deg)`}}></div>
                     </div>
                     <div className="absolute w-[80px] h-[80px]">
                         <div
@@ -43,7 +43,6 @@ const Clock = () => {
                             style={{transform: `rotateZ(${s * 6}deg)`}}>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
