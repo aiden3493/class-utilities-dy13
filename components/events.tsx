@@ -1,8 +1,8 @@
 import DDay from "./eventD-day";
 
 const Event = () => {
-    const mainEvent = {event: "선거", year: 2022, month: 3, date: 22}
-    const nextEvents = [{event: "팝스", year: 2022, month: 3, date: 25}]
+    const mainEvent = {event: "팝스", year: 2022, month: 3, date: 25}
+    const nextEvents = [{event: "운동회", year: 2022, month: 5, date: 4}]
 
     return (
         <div className=" w-[22.5rem] h-[22.5rem] rounded-[35px] border-2 border-solid p-[37px] shadow-xl">
