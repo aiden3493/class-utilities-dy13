@@ -21,7 +21,7 @@ const Home: NextPage = () => {
             <main className="w-screen h-screen select-none bg-[#F2F3F7] overflow-y-hidden flex justify-center items-center absolute z-50 absolute">
                 <div className="w-screen h-screen flex flex-row justify-center items-center content-center bg-[#F2F3F7]">
                     <div
-                        className="w-full h-full overflow-x-hidden overflow-y-scroll lg:overflow-y-hidden lg:overflow-x-hidden max-w-[1300px] lg:max-h-[900px] z-10 rounded-[50px] lg:min-h-[500px] lg:min-w-[1000px] py-10 px-5 flex flex-col items-center lg:grid lg:grid-cols-3 lg:grid-rows-2 space-y-5 lg:space-y-0 lg:gap-5">
+                        className="w-full h-full overflow-x-hidden overflow-y-scroll lg:overflow-y-hidden lg:overflow-x-hidden max-w-[1300px] lg:max-h-[900px] z-10 rounded-[50px] lg:min-h-[500px] lg:min-w-[1000px] py-10 px-5 flex flex-col items-center lg:grid lg:grid-cols-3 lg:grid-rows-2 space-y-5 lg:space-y-0">
                         <div className="flex justify-center items-center content-center">
                             <Clock />
                         </div>
@@ -47,6 +47,8 @@ const Home: NextPage = () => {
             <footer>
             </footer>
         </div>
+        // remix, gatsby, vue, nuxt, angular, svelte
+        // Go, Rust, F#, clojure, earlang, scala, java, kotlin, Elixir
     )
 }
 

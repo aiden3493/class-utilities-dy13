@@ -19,7 +19,12 @@ const Meal = () => {
     }
 
     function formatMeal(value: String) {
-        return `${value}`.replaceAll("0","").replaceAll("1", "").replaceAll("2", "").replaceAll("3", "").replaceAll("4", "").replaceAll("5", "").replaceAll("6", "").replaceAll("7", "").replaceAll("8", "").replaceAll("9", "").replaceAll("10", "").replaceAll("12", "").replaceAll("13", "").replaceAll("14", "").replaceAll("15", "").replaceAll("16", "").replaceAll("17", "").replaceAll("18", "").replaceAll(".", "").replaceAll("(공)", "").replaceAll("(완공)", "").replaceAll("(주식)", "").replaceAll("(중등)", "").replaceAll("(조각)", "").replaceAll("(소)", "").replaceAll("(완)", "").replaceAll("(오븐)", "").split("<br/>")
+        const format =  `${value}`.replaceAll("0","").replaceAll("1", "").replaceAll("2", "").replaceAll("3", "").replaceAll("4", "").replaceAll("5", "").replaceAll("6", "").replaceAll("7", "").replaceAll("8", "").replaceAll("9", "").replaceAll("10", "").replaceAll("12", "").replaceAll("13", "").replaceAll("14", "").replaceAll("15", "").replaceAll("16", "").replaceAll("17", "").replaceAll("18", "").replaceAll(".", "").replaceAll("(공)", "").replaceAll("(완공)", "").replaceAll("(주식)", "").replaceAll("(중등)", "").replaceAll("(조각)", "").replaceAll("(소)", "").replaceAll("(대)", "").replaceAll("(완)", "").replaceAll("(오븐)", "").split("<br/>")
+        const unique = format.filter((element, index) => {
+            return format.indexOf(element) === index;
+        });
+
+        return unique
     }
 
     const onNextClick = async (e: any) => {
@@ -51,7 +56,7 @@ const Meal = () => {
     }, [day, Month, fullYear])
 
     return (
-        <div className=" w-96 h-96 rounded-[35px] border-2 border-solid p-[37px] shadow-xl">
+        <div className=" w-[22.5rem] h-[22.5rem] rounded-[35px] border-2 border-solid p-[37px] shadow-xl">
             <div className="text-center text-[40px] font-bold font-sans">
                 <span className="text-2xl text-center font-medium">
                     school {" "}
@@ -61,18 +66,18 @@ const Meal = () => {
 
             <div className="relative w-full flex justify-center items-center">
                 <div onClick={onBeforeClick}
-                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 mr-[305px] mt-[290px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold">
+                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 right-[265px] top-[120px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold z-50">
                     {"◁"}
                 </div>
 
                 <div onClick={onNextClick}
-                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 ml-[305px] mt-[290px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold">
+                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 left-[265px] top-[120px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold z-50">
                     {"▷"}
                 </div>
             </div>
 
             <div
-                className="mt-3 w-full h-[240px] border-solid border-green-300 border-2 rounded-3xl select-text p-5 flex flex-col items-center font-bold">
+                className="mt-3 w-full h-[220px] border-solid border-green-300 border-2 rounded-3xl select-text p-5 flex flex-col items-center font-bold">
                 <h2 className="text-center text-xl">{`${fullYear}.${Month}.${day}`}</h2>
                 <div className="flex flex-col justify-center w-full h-full space-y-1">
                     {meal.map((element, index) => <p key={index}
