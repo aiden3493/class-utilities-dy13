@@ -64,15 +64,15 @@ const Meal = () => {
                 Lunch
             </div>
 
-            <div className="relative w-full flex justify-center items-center">
+            <div className="relative w-full flex justify-center ">
                 <div onClick={onBeforeClick}
-                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 right-[265px] top-[120px] cursor-pointer flex justify-center items-center border-2 border-green-300 text-green-300 text-center font-bold z-50">
-                    {"◁"}
+                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 right-[265px] top-[120px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold z-50">
+                    <h1 className="mr-[3px] mt-[1px] text-center flex  content-center justify-center">◁</h1>
                 </div>
 
                 <div onClick={onNextClick}
-                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 left-[265px] top-[120px] cursor-pointer flex justify-center items-center border-2 border-green-300 text-green-300 text-center font-bold z-50">
-                    {"▷"}
+                     className="bg-white hover:shadow-md rounded-full w-8 h-8 absolute transition-all duration-150 left-[265px] top-[120px] cursor-pointer flex justify-center border-2 border-green-300 text-green-300 text-center font-bold z-50">
+                    <h1 className="ml-[3px] mt-[1px] text-center flex content-center justify-center">▷</h1>
                 </div>
             </div>
 
