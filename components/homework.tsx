@@ -1,4 +1,4 @@
-import Todo from "./homeworkTodo";
+import HTodo from "./homeworkTodo";
 
 const HomeWork = () => {
 
@@ -16,7 +16,7 @@ const HomeWork = () => {
             <div
                 className="mt-3 w-full h-[220px] border-solid border-green-300 border-2 rounded-3xl select-text p-5 pt-8 flex flex-col items-center font-bold">
                 {homework.map((element, index) =>
-                    <Todo key={index} todo={element.name} href={element.href}/>)}
+                    <HTodo key={index} todo={element.name} href={element.href}/>)}
             </div>
         </div>
     )

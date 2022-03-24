@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const HTodo = (props: any) => {
+const MTodo = (props: any) => {
     const [complete, setComplete] = useState(false)
 
     const onComplete = () => {
@@ -8,12 +8,12 @@ const HTodo = (props: any) => {
     }
 
     return (
-        <div className="flex flex-row justify-between items-center  w-[100%] px-10">
+        <div className="flex flex-row justify-center flex-wrap items-center w-[100%] px-10 relative">
             <div className="flex flex-col justify-center items-center w-[auto]">
                 {props.href !== "" ? <a href={`${props.href}`}
-                                 className={`text-green-300 text-[22px] select-none text-center text-center transition-all duration-200 w-[auto] ${complete ? "line-through" : ""}`}>{props.todo}</a> :
+                                        className={`text-green-300 text-[16px] select-none text-center text-center transition-all duration-200 w-[auto] mr-5 ${complete ? "line-through" : ""}`}>{props.todo}</a> :
                     <a
-                        className={`text-[20px] select-none text-center text-center transition-all duration-200 w-[auto] ${complete ? "line-through" : ""}`}>{props.todo}
+                        className={`text-[16px] select-none text-center text-center transition-all duration-200 w-[auto] mr-5 ${complete ? "line-through" : ""}`}>{props.todo}
                     </a>
                 }
             </div>
@@ -24,4 +24,4 @@ const HTodo = (props: any) => {
     )
 }
 
-export default HTodo
+export default MTodo

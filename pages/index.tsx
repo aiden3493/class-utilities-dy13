@@ -47,8 +47,6 @@ const Home: NextPage = () => {
             <footer>
             </footer>
         </div>
-        // remix, gatsby, vue, nuxt, angular, svelte
-        // Go, Rust, F#, clojure, earlang, scala, java, kotlin, Elixir
     )
 }
 
