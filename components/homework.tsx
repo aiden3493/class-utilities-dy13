@@ -2,7 +2,7 @@ import HTodo from "./homeworkTodo";
 
 const HomeWork = () => {
 
-    const homework = [{name :"진로과제", href: "https://classroom.google.com/c/NDc2NzM3NTA0MjY5/a/NDgwMTU4NTQxMDA3/details"}]
+    const homework = [{name :"사회과제", href: "https://classroom.google.com/c/NDc3OTIxMzMzMDgx/a/NDgyODU1NjI1OTAy/details"}]
 
     return (
         <div className=" w-[22.5rem] h-[22.5rem] rounded-[35px] border-2 border-solid p-[37px] shadow-xl">
