@@ -10,7 +10,7 @@ const HTodo = (props: any) => {
     return (
         <div className="flex flex-row justify-between items-center  w-[100%] px-10">
             <div className="flex flex-col justify-center items-center w-[auto]">
-                {props.href !== "" ? <a href={`${props.href}`}
+                {props.href !== "" ? <a href={`${props.href}`} target="#blank"
                                  className={`text-green-300 text-[22px] select-none text-center text-center transition-all duration-200 w-[auto] ${complete ? "line-through" : ""}`}>{props.todo}</a> :
                     <a
                         className={`text-[20px] select-none text-center text-center transition-all duration-200 w-[auto] ${complete ? "line-through" : ""}`}>{props.todo}
