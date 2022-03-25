@@ -2,9 +2,7 @@ import MTodo from "./materialsTodo";
 
 const Materials = () => {
 
-    //ml-[90px] mt-[70px] absolute
-
-    const materials = [{name: "우유급식 문자->부모님께 말씀드리기", href: ""}, {name: "학부모 상담주간 문자-> 부모님께 말씀드리기", href: ""}]
+    const materials = [{name: "준비물이 없습니다", href: ""}]
 
     return (
         <div className=" w-[22.5rem] h-[22.5rem] rounded-[35px] border-2 border-solid p-[37px] shadow-xl">
