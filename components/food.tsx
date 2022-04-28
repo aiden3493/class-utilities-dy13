@@ -19,7 +19,7 @@ const Meal = () => {
     }
 
     function formatMeal(value: String) {
-        const format =  `${value}`.replaceAll("0","").replaceAll("1", "").replaceAll("2", "").replaceAll("3", "").replaceAll("4", "").replaceAll("5", "").replaceAll("6", "").replaceAll("7", "").replaceAll("8", "").replaceAll("9", "").replaceAll("10", "").replaceAll("12", "").replaceAll("13", "").replaceAll("14", "").replaceAll("15", "").replaceAll("16", "").replaceAll("17", "").replaceAll("18", "").replaceAll(".", "").replaceAll("(공)", "").replaceAll("(완공)", "").replaceAll("(주식)", "").replaceAll("(중등)", "").replaceAll("(조각)", "").replaceAll("(소)", "").replaceAll("(대)", "").replaceAll("(완)", "").replaceAll("(오븐)", "").split("<br/>")
+        const format =  `${value}`.replaceAll("0","").replaceAll("1", "").replaceAll("2", "").replaceAll("3", "").replaceAll("4", "").replaceAll("5", "").replaceAll("6", "").replaceAll("7", "").replaceAll("8", "").replaceAll("9", "").replaceAll("10", "").replaceAll("12", "").replaceAll("13", "").replaceAll("14", "").replaceAll("15", "").replaceAll("16", "").replaceAll("17", "").replaceAll("18", "").replaceAll(".", "").replaceAll("(공)", "").replaceAll("(완공)", "").replaceAll("(주식)", "").replaceAll("(중등)", "").replaceAll("(조각)", "").replaceAll("(소)", "").replaceAll("(대)", "").replaceAll("(완)", "").replaceAll("(오븐)", "").replaceAll("(분쇄육)", "").replaceAll("()", "").split("<br/>")
         const unique = format.filter((element, index) => {
             return format.indexOf(element) === index;
         });
